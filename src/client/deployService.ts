@@ -1,4 +1,4 @@
-import { BlockInfo, LightBlockInfo, ExploratoryDeployResponse } from './types';
+import { BlockInfo, LightBlockInfo, ExploratoryDeployResponse, IsFinalizedResponse, TransactionResponse } from './types';
 import axios, { AxiosInstance } from 'axios';
 
 
@@ -36,7 +36,15 @@ export default class Client {
     return resp.data
   }
 
-  // public isFinalized(hash: string): boolean {}
+  public async isFinalizedBlock (blockHash: string): Promise<IsFinalizedResponse> {
+    const resp = await this.axiosInstance.get<IsFinalizedResponse>('/api/is-finalized/' + blockHash)
+    return resp.data
+  }
+
+  public async getTransaction (blockHash: string): Promise<TransactionResponse[][]> {
+    const resp = await this.axiosInstance.get<TransactionResponse[][]>('/getTransaction/' + blockHash)
+    return resp.data
+  }
 
   // public lastFinalizedBlock(): BlockInfo {}
 

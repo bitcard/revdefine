@@ -14,7 +14,9 @@ const routes: RouteConfig[] = [
           { path: 'block/:blockHash', name: 'blockInfo', component: () => import('pages/BlockInfo.vue') },
           // { path: 'block', component: { template: '<div>User {{ $route.params.blockHash }}</div>' } },
           { path: 'front', name: 'explorerFront', component: () => import('pages/ExplorerFront.vue') },
-          { path: 'rev', name: 'rev', component: () => import('pages/Rev.vue') }
+          { path: 'rev', name: 'rev', component: () => import('pages/Rev.vue') },
+          { path: 'transfer/:deployId', name: 'transafer', component: () => import('pages/Transfer.vue') },
+          { path: 'transfer', name: 'transaferEmpth', component: () => import('pages/Transfer.vue') }
         ]
       },
       { path: 'settings', name: 'settings', component: () => import('pages/Settings.vue') }

@@ -30,4 +30,6 @@ export default class RChainApi {
     const exprData = data?.expr[0].ExprInt as ExprInt
     return exprData.data
   }
+
+
 }

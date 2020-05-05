@@ -54,6 +54,20 @@ export interface ExploratoryDeployResponse {
   block: LightBlockInfo
 }
 
+export interface IsFinalizedResponse {
+  isFinalized: boolean
+}
+
+export interface TransactionResponse {
+  fromAddr: string
+  toAddr: string
+  amount: number
+  retUnforeable: string
+  deploy: DeployInfo
+  success: boolean
+  reason: string
+}
+
 export type RhoExpr = ExprMap | ExprBool | ExprInt | ExprString | ExprUri | ExprBytes | ExprUnforg | ExprPar | ExprList | ExprTuple
 export type RhoUnforg = UnforgDeploy | UnforgDeployer | UnforgPrivate
 

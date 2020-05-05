@@ -83,7 +83,7 @@
       </div>
     </div>
 
-    <div class="row items-center">
+    <!-- <div class="row items-center">
       <div class="col">
         <div class="text-center">{{ $t('EnableWebsocket') }}</div>
       </div>
@@ -95,7 +95,7 @@
           true-value="YES"
         />
       </div>
-    </div>
+    </div> -->
 
     <div class="row items-center">
       <div class="col">
@@ -161,7 +161,7 @@ export default Vue.extend({
       InitBlockCount: this.$store.getters.getInitBlockCount,
       MaxCachedBlockCount: this.$store.getters.getMaxCachedBlockCount,
       Timeout: this.$store.getters.getTimeout,
-      EnableWebsocket: this.$store.getters.getEnableWebsocket,
+      EnableWebsocket: 'NO',
       dense: true,
       alert: false,
       testnetServerList: [
@@ -172,6 +172,7 @@ export default Vue.extend({
         ['node4.testnet', 'http://node4.testnet.rchain-dev.tk:40403']
       ],
       mainnetServerList: [
+        ['revdefine.io', 'https://revdefine.io'],
         ['observer', 'https://observer.services.mainnet.rchain.coop'],
         ['observer-asia', 'http://observer-asia.services.mainnet.rchain.coop:40403'],
         ['observer-us', 'http://observer-us.services.mainnet.rchain.coop:40403'],

@@ -8,13 +8,14 @@ import { BlockStore } from './blockStore';
 
 Vue.use(Vuex);
 
-const DEFAULT_HTTPHOST = process.env.NODE_ENV == 'development' ? 'http://127.0.0.1:40403' : 'https://observer.services.mainnet.rchain.coop';
+// const DEFAULT_HTTPHOST = process.env.NODE_ENV == 'development' ? 'http://127.0.0.1:40403' : 'https://revdefine.io';
+const DEFAULT_HTTPHOST = 'https://revdefine.io';
 const WEBSOCKET_PATH = '/ws/events';
 const DEFAULT_WEBSOCKET_HOST = DEFAULT_HTTPHOST.replace('http', 'ws') + WEBSOCKET_PATH;
 const DEFAULT_INITBLOCKCOUNT = 10;
 const DEFAULT_MAXCACHEDBLOCKCOUNT = 200;
 const DEFAULT_TIMEOUT = 60;
-const DEFAULT_ENABLEWEBSOCKET = 'YES';
+const DEFAULT_ENABLEWEBSOCKET = 'NO';
 
 const store: StoreOptions<RootState> = {
   state: {

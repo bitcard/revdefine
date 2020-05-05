@@ -45,5 +45,19 @@ export default {
   YourEthAddressIsNotValid: '你输入的Eth地址不是正常地址!',
   YourInputAddressIsNotValidAddress: '你输入的地址不是正常地址!',
   InputYourRevAddrOrEthAddr: '输入你的以太地址或者Rev地址!',
-  SomeErrorMightHappenCheckYourNetwork: '查询失败。请检查你的网络!'
+  SomeErrorMightHappenCheckYourNetwork: '查询失败。请检查你的网络!',
+  InputYourDeployId: '输入你的deployId',
+  CheckTransfer: '检查转账',
+  Finalized: '确认',
+  NotFinalized: '未确认',
+  fromAddr: '发出地址',
+  toAddr: '收入地址',
+  amount: '数量',
+  success: '成功',
+  reason: '原因',
+  cost: '费用',
+  errored: '出错',
+  systemDeployError: '系统错误',
+  isFinalized: '是否确认',
+  Transfer: '转账'
 };

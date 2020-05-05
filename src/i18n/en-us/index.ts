@@ -45,5 +45,19 @@ export default {
   YourEthAddressIsNotValid: 'Your Rev address is not valid!',
   YourInputAddressIsNotValidAddress: 'Your input address Is Not a valid address!',
   InputYourRevAddrOrEthAddr: 'Input your Rev address or Eth address!',
-  SomeErrorMightHappenCheckYourNetwork: 'Check balance fail. Please check your network!'
+  SomeErrorMightHappenCheckYourNetwork: 'Check balance fail. Please check your network!',
+  InputYourDeployId: 'Input your deployId',
+  CheckTransfer: 'CheckTransfer',
+  Finalized: 'Finalized',
+  NotFinalized: 'NotFinalized',
+  fromAddr: 'fromAddr',
+  toAddr: 'toAddr',
+  amount: 'amount',
+  success: 'success',
+  reason: 'reason',
+  cost: 'cost',
+  errored: 'errored',
+  systemDeployError: 'systemDeployError',
+  isFinalized: 'isFinalized',
+  Transfer: 'Transfer'
 };

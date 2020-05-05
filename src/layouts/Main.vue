@@ -1,13 +1,25 @@
 <template>
   <q-layout view="hHh lpr fFf">
-    <q-header elevated class="bg-black">
+    <q-header
+      elevated
+      class="bg-black"
+    >
       <q-toolbar>
-        <q-btn flat @click="drawer = !drawer" round dense icon="menu" />
+        <q-btn
+          flat
+          @click="drawer = !drawer"
+          round
+          dense
+          icon="menu"
+        />
         <q-toolbar-title>RevDefine</q-toolbar-title>
 
         <q-space />
 
-        <q-btn-dropdown no-caps :label="lang">
+        <q-btn-dropdown
+          no-caps
+          :label="lang"
+        >
           <q-list>
             <q-item
               clickable
@@ -39,7 +51,11 @@
     >
       <q-scroll-area class="fit">
         <q-list padding>
-          <q-item clickable v-ripple to="/explorer/front">
+          <q-item
+            clickable
+            v-ripple
+            to="/explorer/front"
+          >
             <q-item-section avatar>
               <q-icon name="vertical_split" />
             </q-item-section>
@@ -49,17 +65,39 @@
             </q-item-section>
           </q-item>
 
-          <q-item clickable v-ripple to="/explorer/rev">
+          <q-item
+            clickable
+            v-ripple
+            to="/explorer/transfer"
+          >
             <q-item-section avatar>
-              <q-icon name="img:statics/icons/RChain_Icon_Red.svg"/>
+              <q-icon name="autorenew" />
             </q-item-section>
 
             <q-item-section>
-              Rev 
+              {{ $t('Transfer') }}
             </q-item-section>
           </q-item>
 
-          <q-item clickable v-ripple to="/settings">
+          <q-item
+            clickable
+            v-ripple
+            to="/explorer/rev"
+          >
+            <q-item-section avatar>
+              <q-icon name="img:statics/icons/RChain_Icon_Red.svg" />
+            </q-item-section>
+
+            <q-item-section>
+              Rev
+            </q-item-section>
+          </q-item>
+
+          <q-item
+            clickable
+            v-ripple
+            to="/settings"
+          >
             <q-item-section avatar>
               <q-icon name="settings_applications" />
             </q-item-section>
@@ -120,7 +158,7 @@ export default Vue.extend({
             message: ''.concat(blockStr, ' ', blockHash, ' ', addStr),
             position: 'bottom-left',
             timeout: 5000,
-            actions: [{label: 'Close', color: 'yellow'}]
+            actions: [{ label: 'Close', color: 'yellow' }]
           });
         },
         _ => {
