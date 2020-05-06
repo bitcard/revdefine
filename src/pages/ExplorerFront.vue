@@ -35,7 +35,7 @@
                     v-if="col.label === 'blockHash'"
                     @click="showBlock(col.value, 'BlockHash')"
                     class="text-primary"
-                  ><span class="cursor-pointer">{{ col.value }}</span></q-item-label>
+                  ><span class="cursor-pointer">{{ col.value.slice(0, 10) }}</span></q-item-label>
                   <q-item-label v-else-if="col.label === 'timestamp'">{{ convertTimeStamp(col.value) }}</q-item-label>
                   <q-item-label v-else>{{ col.value }}</q-item-label>
                 </q-item-section>
@@ -81,8 +81,8 @@ export default Vue.extend({
           name: 'blockHash',
           require: true,
           label: 'blockHash',
-          field: 'blockHash',
-          format: (val: string) => `${val.slice(0, 10)}`
+          field: 'blockHash'
+          // format: (val: string) => `${val.slice(0, 10)}`
         },
         { name: 'blockSize', require: true, label: 'blockSize', field: 'blockSize' },
         { name: 'blockNumber', require: true, label: 'blockNumber', field: 'blockNumber' },
@@ -124,16 +124,16 @@ export default Vue.extend({
         let blockHash = searchHash;
         this.$router.push('/explorer/block/'.concat(blockHash));
       } else if (searchType == SearchType.DeployId) {
-        try{
-          this.$q.loading.show()
+        try {
+          this.$q.loading.show();
           const block = await this.$store.state.client.findDeploy(searchHash);
           let blockHash = block.blockHash;
-          this.$q.loading.hide()
+          this.$q.loading.hide();
           this.$router.push('/explorer/block/'.concat(blockHash));
-        } catch(e){
-          this.alert= true
-        } finally{
-          this.$q.loading.hide()
+        } catch (e) {
+          this.alert = true;
+        } finally {
+          this.$q.loading.hide();
         }
       }
       // this.$router.push('/explorer/block/');
