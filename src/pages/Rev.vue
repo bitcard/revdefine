@@ -41,7 +41,7 @@
             style="word-break: break-all;"
           >{{checkAddress}}</div>
           {{$t('is')}}
-          <div class="text-body1 text-weight-bolder">{{balance / 100000000}} Rev ({{balance}} phlo)</div>
+          <div class="text-body1 text-weight-bolder">{{balance / 100000000}} rev ({{balance}})</div>
         </div>
       </q-card-section>
     </q-card>
