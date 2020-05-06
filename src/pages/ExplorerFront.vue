@@ -111,7 +111,18 @@ export default Vue.extend({
       data: this.$store.state.blockStore.blockArray
     };
   },
-
+  async mounted() {
+    this.$q.loading.show();
+    try {
+      this.$store.dispatch('connectWs');
+      await this.$store.dispatch('fetchBlocks', this.$store.getters.getInitBlockCount);
+    } catch (e) {
+      alert(e);
+    } finally {
+      // @ts-ignore
+      this.$q.loading.hide();
+    }
+  },
   methods: {
     searchBlock() {},
 

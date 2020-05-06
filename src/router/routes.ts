@@ -5,7 +5,7 @@ const routes: RouteConfig[] = [
     path: '/',
     component: () => import('layouts/Main.vue'),
     children: [
-      { path: '', component: () => import('pages/Settings.vue') },
+      { path: '', component: () => import('pages/ExplorerFront.vue') },
       {
         path: 'explorer',
         component: () => import('pages/Explorer.vue'),
